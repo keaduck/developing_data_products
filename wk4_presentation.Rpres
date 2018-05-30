@@ -1,0 +1,35 @@
+Exploring Prius Fuel Efficiency
+========================================================
+author: Kea Duckenfield
+date: 30 May 2018
+autosize: true
+
+Purpose
+========================================================
+This simple Shiny app lets the user look for visual evidence of a relationship between several factors and the fuel efficiency of a Prius 2. It accepts a choice of independent and dependent variables (one each) and creates a scatterplot.
+
+The app also enables the user to plot independent variables against each other to check for correlations that might confound relationships with the dependent variable.
+
+Background
+========================================================
+My family was curious about what factors might affect the fuel efficiency of our 2004 Prius 2. So we kept a record of several candidate factors over 16 months and 12,621 miles. There are 34 observations, each for one period of driving between fill-ups.
+
+
+Features
+========================================================
+
+- Offers contextual information
+- Lets the user see MPG as a function of several other factors
+- Offers pulldown menus for the independent and dependent variables
+- Enables the user to plot independent variables against each other
+- Labels the plot to indicate which factors are plotted
+
+
+Example
+========================================================
+Here's the type of plot the app displays. Here, a plot of MPG as a function of the month of the year is shown. The app also allows the user to consider mileage, driver, dashboard display color, and the displayed mileage as independent variables.
+
+```{r, echo=FALSE}
+prius_data <- read.csv("C:/Users/kea/Documents/coursera/products/week3/project/prius_data.csv")
+plot(prius_data$Month, prius_data$MPG, xlab = "Month of the year", ylab = "MPG")
+```
